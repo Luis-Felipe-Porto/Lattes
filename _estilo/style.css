@@ -1,0 +1,51 @@
+@charset "utf-8";
+*{box-sizing: border-box;}
+div#interface{
+    background-color: rgb(85, 94, 89);
+}
+body{
+    background-color: aliceblue;
+    color: blanchedalmond;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section#corpo{
+    width: 1000px;
+    background-color: rgb(45, 33, 92);
+    padding: 50px;
+    margin: -20px auto 0px auto;
+}
+header#cabecalho{
+    background-color: #ffffff;
+    color:black;
+    padding: 10px;
+}
+div#contato{
+    margin-top: 13px; 
+}
+div#habilidades{
+    margin-left: 455px;
+}
+div#formacao{
+    margin-left:455px;
+    margin-top: -130px;
+}
+div#cursos{
+    margin-top: -400px;
+}
+div#infoAdicionais{
+    margin-left: 455px;
+    margin-top: -100px;
+}
+div.item-lattes{
+    display: block;
+    background-color: rgba(92, 86, 86, 0.37);
+    padding: 5px;
+    width: 450px;
+}
+div.item-lattes h3{
+    background-color: rgba(128, 128, 128, 0.767);
+    padding: 5px;
+}
+div.item-lattes h2{
+    font-size: large;
+}
