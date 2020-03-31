@@ -25,6 +25,11 @@ header#cabecalho{
     padding: 10px;
     border-radius: 50px 5px 200px 5px;
 }
+header#cabecalho img{
+    margin-left: 700px;
+    width: 150px;
+    margin-bottom: -150px;
+}
 div#contato{
     margin-top: 13px; 
 }
