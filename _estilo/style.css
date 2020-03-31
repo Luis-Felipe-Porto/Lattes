@@ -24,6 +24,7 @@ header#cabecalho{
     color:black;
     padding: 10px;
     border-radius: 50px 5px 200px 5px;
+    box-shadow: 10px 5px 10px black;
 }
 header#cabecalho img{
     margin-left: 700px;
