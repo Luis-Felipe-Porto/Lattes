@@ -18,6 +18,7 @@ section#corpo{
     background-color: rgb(45, 33, 92);
     padding: 50px;
     margin: -20px auto 0px auto;
+    border: outset 1px;
 }
 header#cabecalho{
     background-color: #ffffff;
@@ -30,6 +31,12 @@ header#cabecalho img{
     margin-left: 700px;
     width: 150px;
     margin-bottom: -150px;
+}
+div#texto-cabecalho{
+    width: 250px;
+    height: 200px;
+    text-align: center;
+
 }
 div#contato{
     margin-top: 13px; 
@@ -61,7 +68,23 @@ div.item-lattes{
 div.item-lattes h3{
     background-color: rgba(128, 128, 128, 0.767);
     padding: 5px;
+    transition-delay: 3s;
+    transition-property: none;
 }
+div.item-lattes:hover h3{
+    width:445px;
+    background-color: rgba(17, 16, 16, 0.658);
+}
+
 div.item-lattes h2{
     font-size: large;
+}
+div#rodape-corpo{
+    width: 1000px;
+    background-color: black;
+    padding: 50px;
+    border-radius: 200% 5% 0% 0%;
+    left: 0;
+    top: 40px;
+    position: relative;
 }
