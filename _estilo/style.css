@@ -2,42 +2,61 @@
 *{box-sizing: border-box;}
 *{padding: none;}
 *{margin: 0;padding: 0;}
-
+*{outline: 1px solid black;}
+/*layout*/
+body,section,header,footer{
+    display: flex;
+}
 body{
     color: blanchedalmond;
     font-family: 'Rubik', sans-serif;
     text-decoration: dashed;
     background-color: #9c46ec;
 }
+#layout{
+    width: 1000px;
+    margin: auto ;
+    background-color: rgb(45, 33, 92);
+    padding: 10px;
+    border: outset 1px;
+}
+#corpo{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item-lattes{
+    background-color: rgba(15, 15, 15, 0.342);
+    padding: 5px;
+    min-width: 250px;
+    min-height: 350px;
+    max-width: 250px;
+    max-height: 350px;
+    margin: 12px;
+    border-style: inset;
+    flex: 1;
+}
 
-header#cabecalho{
+/*cabecalho*/
+#cabecalho{
     background-color: #ffffff;
     color:black;
     padding: 15px;
-    border-radius: 50px 5px 200px 5px;
     box-shadow: 10px 5px 10px black;
-}
-header#cabecalho img{
-    margin-left: 650px;
-    width: 150px;
-    margin-bottom: -150px;
+    width: 800px;
+    margin: auto;
 }
 div#texto-cabecalho{
     width: 250px;
     height: 200px;
     text-align: center;
 }
+/*corpo*/
+
 div#cursos li{
     font-weight: bold;
     font-size: 18px;
 }
-div.item-lattes{
-    display: block;
-    background-color: rgba(15, 15, 15, 0.342);
-    padding: 5px;
-    width: 450px;
-    border-style: inset;
-}
+
 div.item-lattes h3{
     background-color: rgba(128, 128, 128, 0.767);
     padding: 5px;
@@ -49,62 +68,23 @@ div.item-lattes li{
     text-overflow: clip;
 }
 div.item-lattes:hover h3{
-    width:435px;
     background-color: rgba(17, 16, 16, 0.658);
 }
 
 div.item-lattes h2{
     font-size: large;
 }
-
-/*layout*/
-#contato{
-    position: absolute;
-    width: 450px;
-    height: 150px;
-}
-#formacao{
-    position: absolute;
-    width: 450px;
-    height: 200px;
-    margin-left: 450px; 
-}
-#habilidades{
-    position: absolute;
-    width: 450px;
-    height: 250px;
-    margin-top: 200px;
-    margin-left: 450px; 
-}
-#infoAdicionais{
-    position: absolute;
-    width: 450px;
-    height: 200px;
-    margin-top: 450px;
-    margin-left: 450px;
-}
-#cursos{
-    position: absolute;
-    width: 450px;
-    height: 500px;
-    margin-top: 150px;
-}
-#rodape-corpo{
-    position: absolute;
-    width: 900px;
-    height: 75px;
-    margin-top: 570px;
+/*rodapé*/
+#final-lattes{
     background-color: #ffffff;
-    border-style: groove;
-    border-radius: 100px 5px 10px 5px;
-    box-shadow: 2px 20px 15px black;
+    width: 700px;
+    color: black;
+    margin: auto;
+    text-align: center;
 }
-#layout{
-    position: relative;
-    width: 1000px;
-    height: 1000px;
-    margin: -20px auto 0px auto;
-    background-color: rgb(45, 33, 92);
-    padding: 50px;
-    border: outset 1px;
-} 
+#texto-rodape{
+    text-align: center;
+    margin: auto;
+}
+
+
