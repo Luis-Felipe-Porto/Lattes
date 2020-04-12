@@ -90,12 +90,29 @@ div.item-lattes li{
 div.item-lattes:hover h3{
     background-color: rgba(17, 16, 16, 0.658);
     transform: rotate;
-    
-
-
-    
 }
+#contato li{
+    list-style: none;
+}
+.control a{
+    background-color: rgb(221, 228, 235);
+    padding: 5px;
+    margin-left: 10px;
+    display: flex;
+    border-radius: 5px;
+    text-decoration: none;
 
+
+}
+.control{
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 2px;
+    border-radius: 10px;
+    text-align: end;
+}
 div.item-lattes h2{
     font-size: large;
 }
@@ -118,5 +135,7 @@ div.item-lattes h2{
 }
 #texto-rodape a{
     text-decoration: none;
+    margin-left: 10px;
+    font-size: 30px;
 }
 
