@@ -2,13 +2,18 @@
 *{box-sizing: border-box;}
 *{padding: none;}
 *{margin: 0;padding: 0;}
-*{outline: 1px solid black;}
+
+
 /*layout*/
 body,section,header,footer{
     display: flex;
 }
+ul{
+    list-style-image: url("../_imagens/checkcx.png");
+
+}
 body{
-    color: blanchedalmond;
+    color: back;
     font-family: 'Rubik', sans-serif;
     text-decoration: dashed;
     background-color: #9c46ec;
@@ -16,46 +21,52 @@ body{
 #layout{
     width: 1000px;
     margin: auto ;
-    background-color: rgb(45, 33, 92);
+    background: #3e2f5a;
     padding: 10px;
     border: outset 1px;
+    
 }
 #corpo{
     flex-wrap: wrap;
     justify-content: center;
 }
 .item-lattes{
-    background-color: rgba(15, 15, 15, 0.342);
     padding: 5px;
     min-width: 250px;
     min-height: 350px;
-    max-width: 250px;
-    max-height: 350px;
+    max-width: 300px;
+    max-height: 400px;
     margin: 12px;
     border-style: inset;
     flex: 1;
+    align-items: center;
+    border-radius: 10px;
+    
 }
 
 /*cabecalho*/
 #cabecalho{
-    background-color: #ffffff;
-    color:black;
+    color:#ffffff;
     padding: 15px;
-    box-shadow: 10px 5px 10px black;
     width: 800px;
     margin: auto;
+    outline: 1px solid #ffffff;
+    border-radius: 10px;
 }
 div#texto-cabecalho{
     width: 250px;
     height: 200px;
     text-align: center;
 }
+#imagem{
+    border: 1px solid black;
+    border-radius: 100%;
+    width: 200px;
+    justify-content: flex-end;
+}
 /*corpo*/
 
-div#cursos li{
-    font-weight: bold;
-    font-size: 18px;
-}
+
 
 div.item-lattes h3{
     background-color: rgba(128, 128, 128, 0.767);
@@ -63,12 +74,26 @@ div.item-lattes h3{
     transition-delay: 3s;
     transition-property: none;
 }
+.control{
+    display: inline;
+}
 div.item-lattes li{
-    margin-left: 20px;
+    list-style-position: inside;
     text-overflow: clip;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight:bold;
+    text-shadow: black;
+    
 }
 div.item-lattes:hover h3{
     background-color: rgba(17, 16, 16, 0.658);
+    transform: rotate;
+    
+
+
+    
 }
 
 div.item-lattes h2{
@@ -81,10 +106,17 @@ div.item-lattes h2{
     color: black;
     margin: auto;
     text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    font-weight: bold;
 }
 #texto-rodape{
     text-align: center;
     margin: auto;
+    
+    
 }
-
+#texto-rodape a{
+    text-decoration: none;
+}
 
