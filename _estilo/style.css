@@ -10,40 +10,25 @@ body,section,header,footer{
 }
 ul{
     list-style-image: url("../_imagens/checkcx.png");
-
 }
 body{
-    color: back;
+    color: #ffffff;
     font-family: 'Rubik', sans-serif;
     text-decoration: dashed;
-    background-color: #9c46ec;
+    background-color: #585858;
 }
 #layout{
     width: 1000px;
     margin: auto ;
-    background: #3e2f5a;
+    background:url("../_imagens/extintosuperior.jpg");
     padding: 10px;
-    border: outset 1px;
-    
+    border: #000 outset 1px;
 }
+/*corpo*/
 #corpo{
     flex-wrap: wrap;
     justify-content: center;
 }
-.item-lattes{
-    padding: 5px;
-    min-width: 250px;
-    min-height: 350px;
-    max-width: 300px;
-    max-height: 400px;
-    margin: 12px;
-    border-style: inset;
-    flex: 1;
-    align-items: center;
-    border-radius: 10px;
-    
-}
-
 /*cabecalho*/
 #cabecalho{
     color:#ffffff;
@@ -64,58 +49,64 @@ div#texto-cabecalho{
     width: 200px;
     justify-content: flex-end;
 }
-/*corpo*/
-
-
-
-div.item-lattes h3{
-    background-color: rgba(128, 128, 128, 0.767);
-    padding: 5px;
-    transition-delay: 3s;
-    transition-property: none;
+/*cartas*/
+.front,.back{
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+    flex: 1;
+    border-radius: 5px;
+    align-items: center;
 }
-.control{
-    display: inline;
+.card{
+    cursor: pointer;
+    width: 250px;
+    height: 350px;
+    margin: 5px;
 }
-div.item-lattes li{
-    list-style-position: inside;
-    text-overflow: clip;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight:bold;
-    text-shadow: black;
+.front img{
+    height: 100%;
+    width: 100%;
+}
+.front{
+    transform: perspective(600px) rotateY(0deg);
     
 }
-div.item-lattes:hover h3{
-    background-color: rgba(17, 16, 16, 0.658);
-    transform: rotate;
+.back{
+    background: #cfcfcf;
+    transform: perspective(600px) rotateY(180deg);
+    
 }
-#contato li{
-    list-style: none;
+.back-content{
+    color:black;
+    width: 100%;
+    padding: 5px;
+    flex: 1;
 }
 .control a{
-    background-color: rgb(221, 228, 235);
+    background-color: rgb(151, 171, 192);
     padding: 5px;
-    margin-left: 10px;
-    display: flex;
     border-radius: 5px;
     text-decoration: none;
-
-
+    margin-left: 5px;
 }
 .control{
     background-color: aliceblue;
     display: flex;
     align-items: center;
-    justify-content: end;
     padding: 2px;
     border-radius: 10px;
-    text-align: end;
+    text-align: right; 
 }
-div.item-lattes h2{
-    font-size: large;
+.control h3{
+    margin-right: 100px;
+    width: 100%;
+    text-align: left;
 }
+
 /*rodapé*/
 #final-lattes{
     background-color: #ffffff;
@@ -130,12 +121,22 @@ div.item-lattes h2{
 #texto-rodape{
     text-align: center;
     margin: auto;
-    
-    
 }
 #texto-rodape a{
     text-decoration: none;
     margin-left: 10px;
     font-size: 30px;
 }
+/*movimentacao*/
 
+
+.card:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+    
+}
+.card:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+    
+}
+
+  
