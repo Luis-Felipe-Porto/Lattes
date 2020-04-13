@@ -2,15 +2,13 @@
 *{box-sizing: border-box;}
 *{padding: none;}
 *{margin: 0;padding: 0;}
-
+*{outline: 1px solid #fff;}
 
 /*layout*/
 body,section,header,footer{
     display: flex;
 }
-ul{
-    list-style-image: url("../_imagens/checkcx.png");
-}
+
 body{
     color: #ffffff;
     font-family: 'Rubik', sans-serif;
@@ -23,6 +21,7 @@ body{
     background:url("../_imagens/extintosuperior.jpg");
     padding: 10px;
     border: #000 outset 1px;
+    
 }
 /*corpo*/
 #corpo{
@@ -38,7 +37,7 @@ body{
     outline: 1px solid #ffffff;
     border-radius: 10px;
 }
-div#texto-cabecalho{
+#texto-cabecalho{
     width: 250px;
     height: 200px;
     text-align: center;
@@ -53,19 +52,29 @@ div#texto-cabecalho{
 .front,.back{
     width: 250px;
     height: 350px;
-    overflow: hidden;
+    overflow: clip;
     backface-visibility: hidden;
     position: absolute;
-    transition: transform .6s linear;
-    flex: 1;
+    transition: .6s linear;
     border-radius: 5px;
     align-items: center;
+}
+.txt-card h2{
+    font-size: 18px;
+    margin-top: 15px;
+}
+.txt-card li{
+    font-size: 20px;
+    margin-top: 15px;
+    list-style: none;
+    font-weight: bold;
 }
 .card{
     cursor: pointer;
     width: 250px;
     height: 350px;
     margin: 5px;
+ 
 }
 .front img{
     height: 100%;
@@ -86,8 +95,9 @@ div#texto-cabecalho{
     padding: 5px;
     flex: 1;
 }
+/*controles de cartas*/
 .control a{
-    background-color: rgb(151, 171, 192);
+    background-color: #97abc0;
     padding: 5px;
     border-radius: 5px;
     text-decoration: none;
@@ -106,7 +116,6 @@ div#texto-cabecalho{
     width: 100%;
     text-align: left;
 }
-
 /*rodapé*/
 #final-lattes{
     background-color: #ffffff;
@@ -125,11 +134,14 @@ div#texto-cabecalho{
 #texto-rodape a{
     text-decoration: none;
     margin-left: 10px;
-    font-size: 30px;
+    font-size: 35px;
+   
+}
+#texto-rodape a:hover{
+    color: #000;
+    transition: ease-in-out 1s;
 }
 /*movimentacao*/
-
-
 .card:hover > .front{
     transform: perspective(600px) rotateY(-180deg);
     
