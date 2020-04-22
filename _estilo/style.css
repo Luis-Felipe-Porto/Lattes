@@ -1,154 +1,142 @@
-@charset "utf-8";
-*{box-sizing: border-box;}
-*{padding: none;}
-*{margin: 0;padding: 0;}
-
-
-/*layout*/
-body,section,header,footer{
-    display: flex;
-}
-
 body{
-    color: #ffffff;
-    font-family: 'Rubik', sans-serif;
-    text-decoration: dashed;
-    background-color: #585858;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
 }
-#layout{
-    width: 1000px;
-    margin: auto ;
-    background:url("../_imagens/extintosuperior.jpg");
-    padding: 10px;
-    border: #000 outset 1px;
-    
-}
-/*corpo*/
-#corpo{
-    flex-wrap: wrap;
-    justify-content: center;
-}
-/*cabecalho*/
-#cabecalho{
-    color:#ffffff;
-    padding: 15px;
-    width: 800px;
-    margin: auto;
-    outline: 1px solid #ffffff;
-    border-radius: 10px;
-}
-#texto-cabecalho{
-    width: 250px;
-    height: 200px;
-    text-align: center;
-}
-#imagem{
-    border: 1px solid black;
-    border-radius: 100%;
-    width: 200px;
-    justify-content: flex-end;
-}
-/*cartas*/
-.front,.back{
-    width: 250px;
-    height: 350px;
-    overflow: clip;
-    backface-visibility: hidden;
-    position: absolute;
-    transition: .6s linear;
-    border-radius: 5px;
-    align-items: center;
-}
-.txt-card h2{
-    font-size: 18px;
-    margin-top: 15px;
-}
-.txt-card li{
-    font-size: 20px;
-    margin-top: 15px;
-    list-style: none;
-    font-weight: bold;
-}
-.card{
-    cursor: pointer;
-    width: 250px;
-    height: 350px;
-    margin: 5px;
- 
-}
-.front img{
-    height: 100%;
-    width: 100%;
-}
-.front{
-    transform: perspective(600px) rotateY(0deg);
-    
-}
-.back{
-    background: #cfcfcf;
-    transform: perspective(600px) rotateY(180deg);
-    
-}
-.back-content{
-    color:black;
-    width: 100%;
-    padding: 5px;
-    flex: 1;
-}
-/*controles de cartas*/
-.control a{
-    background-color: #97abc0;
-    padding: 5px;
-    border-radius: 5px;
+*{
+    margin: 0;
+    padding: 0;
+    outline: 1px solid #000;
     text-decoration: none;
-    margin-left: 5px;
+    box-sizing: border-box;
 }
-.control{
-    background-color: aliceblue;
-    display: flex;
-    align-items: center;
-    padding: 2px;
-    border-radius: 10px;
-    text-align: right; 
-}
-.control h3{
-    margin-right: 100px;
-    width: 100%;
-    text-align: left;
-}
-/*rodapé*/
-#final-lattes{
-    background-color: #ffffff;
-    width: 700px;
-    color: black;
-    margin: auto;
-    text-align: center;
-    border-radius: 10px;
-    padding: 20px;
-    font-weight: bold;
-}
-#texto-rodape{
-    text-align: center;
-    margin: auto;
-}
-#texto-rodape a{
-    text-decoration: none;
-    margin-left: 10px;
-    font-size: 35px;
+#main-content{
    
-}
-#texto-rodape a:hover{
-    color: #000;
-    transition: ease-in-out 1s;
-}
-/*movimentacao*/
-.card:hover > .front{
-    transform: perspective(600px) rotateY(-180deg);
-    
-}
-.card:hover > .back{
-    transform: perspective(600px) rotateY(0deg);
-    
+    min-height: 100vh;
+    max-width: 1000px;
+    display: block;
+    padding-left: 300px;
+    margin: auto;
 }
 
-  
+/*Aside*/
+.aside{
+    width: 300px;
+    background:#fdf9ff;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    border-right:1px solid #e8dfec;
+    padding: 30px;
+}
+
+.aside .copyright-text{
+    background: #ededed;
+    font-size: 13px;
+    color: #7d7d7d;
+}
+/*Home*/
+.home{
+    background: url('../_imagens/slide1.jpg') no-repeat;
+    height: 90vh;
+    background-attachment: fixed;
+    width: 100%;
+}
+.home .bem-vindo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #0000008a;
+    color: #fff;
+    font-size: 40px;
+}
+.home .cartas{
+    background: black;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+.home .cartas .card{
+    background: red;
+    width: 100px;
+    height: 200px;
+    display: inline-block;
+    margin: 10px;
+    
+}
+/*sobre*/
+.sobre{
+    height:70vh;
+}
+.sobre .content{
+    background: black;
+    display: flex;
+}
+.sobre .content .foto{
+    background: grey;
+    width: 20%;
+    height: 300px;
+    display: inline-block;
+}
+.sobre .content .info-sobre{
+    background-color: aqua;
+    width: 80%;
+    display: inline-block;
+    
+}
+/*Projetos*/
+.projetos{
+    height: 50vh;
+}
+.projetos .descricao{
+    width: 100%;
+    height: 30%;
+    background-color: #7d7d7d;
+}
+.projetos .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 100%;
+    height: 70%;
+}
+.projetos .content .item-galeria{
+    width: 200px;
+    height: 200px;
+
+    margin: 10px;
+    
+}
+/*skills*/
+.skills{
+    height: 50vh;
+}
+.skills .descricao{
+    width: 100%;
+    height: 30%;
+}
+.skills .habilidades{
+    display: inline-block;
+    height: 70%;
+    width: 50%;
+    
+}
+/*resume*/
+.resume{
+    height: 80vh;
+}
+/*portfolio*/
+.portfolio{
+    height: 90vh;
+}
+/*contato*/
+.contato{
+    height: 50vh;
+}
