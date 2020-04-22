@@ -110,7 +110,6 @@ body{
 .projetos .content .item-galeria{
     width: 200px;
     height: 200px;
-
     margin: 10px;
     
 }
@@ -162,7 +161,39 @@ body{
 .portfolio{
     height: 90vh;
 }
+.portfolio .descricao{
+    height: 30%;
+    background-color: blueviolet;
+}
+.portfolio .content{
+    max-height: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.portfolio .content article{
+    width: 30vh;
+    height: 30vh;
+    margin: 5px;
+    
+}
 /*contato*/
 .contato{
     height: 50vh;
+}
+.contato .descricao{
+    height: 30%;
+    background-color: tomato;
+
+}
+.contato .content{
+    height: 70%;
+    background-color: rebeccapurple;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.contato .content .item-contato{
+        width: 50vh; 
 }
