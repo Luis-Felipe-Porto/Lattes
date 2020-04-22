@@ -123,14 +123,40 @@ body{
     height: 30%;
 }
 .skills .habilidades{
-    display: inline-block;
-    height: 70%;
     width: 50%;
-    
+    margin: 5px;
+}
+.skills .content{
+    display: flex;
+    background: red;
+    height: 70%;
+    align-items: center;
 }
 /*resume*/
 .resume{
     height: 80vh;
+    
+}
+.resume .descricao{
+    width: 100%;
+    height: 30%;
+    background-color: yellowgreen;
+}
+.resume .content{
+    background-color: red;
+    display: flex;
+    height: 70%;
+    
+}
+.resume .content .formacao {
+    margin-top: 30px;
+}
+.resume .content .formacao ul{
+    align-content: center;
+}
+.resume .content .formacao li{
+    margin-bottom: 10px;
+    align-content: center;
 }
 /*portfolio*/
 .portfolio{
