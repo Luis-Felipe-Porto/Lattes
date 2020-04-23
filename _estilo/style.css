@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
 body{
     margin: 0;
     line-height: 1.5;
@@ -7,9 +8,10 @@ body{
 *{
     margin: 0;
     padding: 0;
-    
+    font-family: 'Rubik', sans-serif;
     text-decoration: none;
     box-sizing: border-box;
+    outline: 1px solid #600;
 }
 #main-content{
     min-height: 100vh;
@@ -19,9 +21,11 @@ body{
     margin: auto;
 }
 .descricao h2{
-    color: #fff;
+    color: #ededed;
     border-bottom: 2px solid black;
     background: #3f4855;
+    padding: 5px;
+    
 }
 .descricao{
     overflow-wrap: break-word;
@@ -113,40 +117,40 @@ body{
 }
 .sobre .descricao{
     height: 30%;
-    background-color: blue;
+   font-size: 15px;
 }
 .sobre .content{
-    background: black;
+  
     display: flex;
     height: 70%;
 }
 .sobre .content .foto{
-    background: grey;
+
     width: 40%;
     display: inline-block;
-    padding: 10px;
+    padding: 0 10px 10px 0;
 }
 .sobre .content .foto img{
     width: 100%;
     height: 100%;
 }
 .sobre .content .info-sobre{
-    background-color: aqua;
+    
     width: 80%;
     height: 100%;
     display: inline-block;
 }
 .sobre .content .info-sobre .descricao{
-    height: 30%;
+    height: 40%;
     overflow: hidden;
 }
 .info-sobre .formacao{
-    background: royalblue;
+    height: 60%;
     list-style-position: inside;
+    list-style-type:symbols('X');
+    
 }
-.sobre .content .info-sobre .formacao{
-    height: 70%;
-}
+
 /*Projetos*/
 .projetos{
     height: 50vh;
@@ -154,14 +158,13 @@ body{
 .projetos .descricao{
     width: 100%;
     height: 30%;
-    background-color: #7d7d7d;
+    overflow: hidden;
 }
 .projetos .content{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: red;
     width: 100%;
     height: 70%;
 }
@@ -169,7 +172,7 @@ body{
     width: 200px;
     height: 200px;
     margin: 10px;
-    
+    outline: 1px dashed #000;
 }
 /*skills*/
 .skills{
@@ -178,42 +181,42 @@ body{
 .skills .descricao{
     width: 100%;
     height: 30%;
+    overflow: hidden;
+}
+.skills .content{
+    display: flex;
+    height: 70%;
+    align-items: center;
 }
 .skills .habilidades{
     width: 50%;
     margin: 5px;
 }
-.skills .content{
-    display: flex;
-    background: red;
-    height: 70%;
-    align-items: center;
+.skills .habilidades ul>li{
+    list-style: none;
+    outline: 1px dashed #000;
 }
+
 /*resume*/
 .resume{
-    height: 80vh;
-    
+    height: 80vh;  
 }
 .resume .descricao{
     width: 100%;
     height: 30%;
-    background-color: yellowgreen;
 }
 .resume .content{
-    background-color: red;
     display: flex;
     height: 70%;
-    
 }
 .resume .content .formacao {
     margin-top: 30px;
-}
-.resume .content .formacao ul{
-    align-content: center;
+    outline: 1px dashed #000;
 }
 .resume .content .formacao li{
     margin-bottom: 10px;
     align-content: center;
+    list-style: none;
 }
 /*portfolio*/
 .portfolio{
@@ -221,7 +224,6 @@ body{
 }
 .portfolio .descricao{
     height: 30%;
-    background-color: blueviolet;
 }
 .portfolio .content{
     max-height: 70%;
@@ -234,7 +236,7 @@ body{
     width: 30vh;
     height: 30vh;
     margin: 5px;
-    
+    outline: 1px dashed #000;
 }
 /*contato*/
 .contato{
@@ -242,16 +244,27 @@ body{
 }
 .contato .descricao{
     height: 30%;
-    background-color: tomato;
-
+    overflow: hidden;
 }
 .contato .content{
     height: 70%;
-    background-color: rebeccapurple;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .contato .content .item-contato{
-        width: 50vh; 
+        width: 50vh;
+        outline: 1px dashed #000;
+        padding-left: 30px;      
+}
+.content .item-contato .local{
+    list-style: none;
+    align-content: center;
+    margin: 10px;
+}
+.item-contato .local li{
+    margin: 10px;
+}
+.item-contato form >input{
+    display: block;
 }
