@@ -228,13 +228,27 @@
                             <li>E-mail</li>
                             <li>Endereco</li>
                         </ul>
-                    </article>
-                    <article class="item-contato">
-                        <form action="" method="get">
-                            Seu Nome:<input type="text" name="youname" id="youname">
-                            E-mail<input type="email" name="youemail" id="youemail">
-                            Assunto:<input type="text" name="objetivo" id="objetivo">
-                            Mensagem:<input type="text" name="txtarea" id="txtarea">  
+                        <form action="" method="get" class="fale-conosco">
+                            <p>
+                                <label for="cNome">Seu Nome:</label>
+                                <input class="msg" type="text" name="youname" id="youname">
+                            </p>
+                            <p>
+                                <label for="cEmail">E-mail</label>
+                                <input class="msg" type="email" name="youemail" id="youemail">
+                            </p>
+                            <p>
+                                <label for="cAssunto">Assunto:</label>
+                                <input class="msg" type="text" name="objetivo" id="objetivo">
+                            </p>
+                            
+                            <p>
+                                <label for="cMensagem">Mensagem:</label>
+                                <textarea name="mensagem" class="msg" cols="30" rows="7" placeholder="Deixe aqui sua mensagem..."></textarea>
+                            </p>
+                             <p>
+                                 <input type="button" value="Enviar" class="msg">
+                             </p>
                         </form>
                     </article>
                 </div>

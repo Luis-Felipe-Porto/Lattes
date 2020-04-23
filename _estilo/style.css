@@ -11,7 +11,7 @@ body{
     font-family: 'Rubik', sans-serif;
     text-decoration: none;
     box-sizing: border-box;
-    outline: 1px solid #600;
+    
 }
 #main-content{
     min-height: 100vh;
@@ -253,18 +253,31 @@ body{
     justify-content: center;
 }
 .contato .content .item-contato{
-        width: 50vh;
+        width: 100%;
         outline: 1px dashed #000;
-        padding-left: 30px;      
+        padding-left: 30px;
+        display: inline-flex;        
+}
+.content .item-contato .fale-conosco{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item-contato .fale-conosco .msg{
+    display: block;
 }
 .content .item-contato .local{
     list-style: none;
     align-content: center;
     margin: 10px;
+    justify-content:center;
+    width: 30%;
 }
 .item-contato .local li{
     margin: 10px;
 }
-.item-contato form >input{
+.item-contato form>p{
     display: block;
 }
