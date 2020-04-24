@@ -11,7 +11,6 @@ body{
     font-family: 'Rubik', sans-serif;
     text-decoration: none;
     box-sizing: border-box;
-    
 }
 #main-content{
     min-height: 100vh;
@@ -25,11 +24,10 @@ body{
     border-bottom: 2px solid black;
     background: #3f4855;
     padding: 5px;
-    
 }
 .descricao{
     overflow-wrap: break-word;
-    display: block;
+    
 }
 /*Aside*/
 .aside{
@@ -97,26 +95,13 @@ body{
     color: #fff;
     font-size: 40px;
 }
-.home .cartas{
-    background: black;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    margin: 10px;
-}
-.home .cartas .card{
-    background: red;
-    width: 100px;
-    height: 200px;
-    display: inline-block;
-    margin: 10px;
-}
+
 /*sobre*/
 .sobre{
     height:70vh;
 }
 .sobre .descricao{
-    height: 30%;
+    
    font-size: 15px;
 }
 .sobre .content{
@@ -141,11 +126,11 @@ body{
     display: inline-block;
 }
 .sobre .content .info-sobre .descricao{
-    height: 40%;
-    overflow: hidden;
+    
+    
 }
 .info-sobre .formacao{
-    height: 60%;
+    
     list-style-position: inside;
     list-style-type:symbols('X');
     
@@ -157,8 +142,7 @@ body{
 }
 .projetos .descricao{
     width: 100%;
-    height: 30%;
-    overflow: hidden;
+    
 }
 .projetos .content{
     display: flex;
@@ -166,7 +150,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 70%;
+    
 }
 .projetos .content .item-galeria{
     width: 200px;
@@ -180,12 +164,12 @@ body{
 }
 .skills .descricao{
     width: 100%;
-    height: 30%;
-    overflow: hidden;
+    
+    
 }
 .skills .content{
     display: flex;
-    height: 70%;
+    
     align-items: center;
 }
 .skills .habilidades{
@@ -203,7 +187,7 @@ body{
 }
 .resume .descricao{
     width: 100%;
-    height: 30%;
+    
 }
 .resume .content{
     display: flex;
@@ -223,7 +207,7 @@ body{
     height: 90vh;
 }
 .portfolio .descricao{
-    height: 30%;
+    
 }
 .portfolio .content{
     max-height: 70%;
@@ -243,11 +227,11 @@ body{
     height: 50vh;
 }
 .contato .descricao{
-    height: 30%;
-    overflow: hidden;
+    
+    
 }
 .contato .content{
-    height: 70%;
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
