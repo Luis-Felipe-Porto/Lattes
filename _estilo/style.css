@@ -9,6 +9,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
+   
     text-decoration: none;
     box-sizing: border-box;
 }
@@ -20,25 +21,25 @@ body{
     margin: auto;
 }
 .descricao h2{
+    margin-top: 20px;
     color: #ededed;
     border-bottom: 2px solid black;
-    background: #3f4855;
+    background:#292720;
     padding: 5px;
 }
 .descricao{
     overflow-wrap: break-word;
-    
 }
 /*Aside*/
 .aside{
-    width: 300px;
-    background: #3f4855;
+    width: 270px;
+    background: #292720;
     position: fixed;
     height: 100%;
     left: 0;
     top: 0;
     z-index: 10;
-    color: #ededed;
+    color: #faa856;
     padding: 30px;
 }
 
@@ -63,15 +64,19 @@ body{
     list-style: none;
     color: #ededed;
     margin-top: 50px;
+    display: block;
 }
 .aside .nav li{
     margin: 20px;
-    justify-content: start;
 }
 .aside .nav li>a{
     margin-left: 20px;
     color: #ededed;
-    font-size: 20px;
+    font-size: 15px;
+}
+.aside .nav li:hover{
+    color: #eafa56;
+    transition: all 1s;
 }
 .aside .copyright-text{
     background: #ededed;
@@ -81,92 +86,62 @@ body{
 }
 /*Home*/
 .home{
-    background: url('../_imagens/slide1.jpg') no-repeat;
     height: 90vh;
+    background: url("../_imagens/home-back.jpg")no-repeat;
     background-attachment: fixed;
-    width: 100%;
-}
-.home .bem-vindo{
-    display: flex;
+    background-size: 100%;
+    margin-left: 280px;
+    padding: 5px;   
+} 
+.home .bem-vindo{         
+    display: flex;         
     justify-content: center;
     align-items: center;
-    height: 100%;
     background-color: #0000008a;
     color: #fff;
     font-size: 40px;
+    height: 100%;
+    padding-left: 270px;
 }
+
 
 /*sobre*/
-.sobre{
-    height:70vh;
-}
-.sobre .descricao{
-    
-   font-size: 15px;
-}
+
 .sobre .content{
-  
     display: flex;
-    height: 70%;
 }
 .sobre .content .foto{
-
-    width: 40%;
     display: inline-block;
-    padding: 0 10px 10px 0;
+    margin: auto 10px auto 0;
 }
 .sobre .content .foto img{
-    width: 100%;
-    height: 100%;
+    width: 40vh;
+    height: 40vh;
 }
 .sobre .content .info-sobre{
-    
-    width: 80%;
-    height: 100%;
     display: inline-block;
 }
-.sobre .content .info-sobre .descricao{
-    
-    
-}
 .info-sobre .formacao{
-    
     list-style-position: inside;
-    list-style-type:symbols('X');
-    
+    padding: 10px;
 }
 
 /*Projetos*/
-.projetos{
-    height: 50vh;
-}
-.projetos .descricao{
-    width: 100%;
-    
-}
 .projetos .content{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    
+    width: 100%;  
 }
 .projetos .content .item-galeria{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin: 10px;
     outline: 1px dashed #000;
 }
 /*skills*/
-.skills{
-    height: 50vh;
-}
-.skills .descricao{
-    width: 100%;
-    
-    
-}
 .skills .content{
     display: flex;
     
@@ -182,13 +157,6 @@ body{
 }
 
 /*resume*/
-.resume{
-    height: 80vh;  
-}
-.resume .descricao{
-    width: 100%;
-    
-}
 .resume .content{
     display: flex;
     height: 70%;
@@ -203,12 +171,6 @@ body{
     list-style: none;
 }
 /*portfolio*/
-.portfolio{
-    height: 90vh;
-}
-.portfolio .descricao{
-    
-}
 .portfolio .content{
     max-height: 70%;
     display: flex;
@@ -223,18 +185,12 @@ body{
     outline: 1px dashed #000;
 }
 /*contato*/
-.contato{
-    height: 50vh;
-}
-.contato .descricao{
-    
-    
-}
 .contato .content{
     
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .contato .content .item-contato{
         width: 100%;
@@ -251,13 +207,15 @@ body{
 }
 .item-contato .fale-conosco .msg{
     display: block;
+    background-color: #3f4855;
 }
 .content .item-contato .local{
     list-style: none;
     align-content: center;
-    margin: 10px;
+    margin: 10px 10px 10px 0;
     justify-content:center;
     width: 30%;
+    
 }
 .item-contato .local li{
     margin: 10px;
