@@ -9,7 +9,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
-   
+    
     text-decoration: none;
     box-sizing: border-box;
 }
@@ -100,15 +100,14 @@ body{
     background-color: #0000008a;
     color: #fff;
     font-size: 40px;
-    height: 100%;
+    height: 90vh;
     padding-left: 270px;
 }
-
-
 /*sobre*/
 
 .sobre .content{
     display: flex;
+    flex-wrap: wrap;
 }
 .sobre .content .foto{
     display: inline-block;
@@ -144,11 +143,11 @@ body{
 /*skills*/
 .skills .content{
     display: flex;
-    
     align-items: center;
+    flex-wrap: wrap;
 }
 .skills .habilidades{
-    width: 50%;
+    width: 100%;
     margin: 5px;
 }
 .skills .habilidades ul>li{
@@ -159,11 +158,15 @@ body{
 /*resume*/
 .resume .content{
     display: flex;
-    height: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    width: 100%;
 }
 .resume .content .formacao {
-    margin-top: 30px;
+    margin: 5px auto;
     outline: 1px dashed #000;
+    width: 50vh;
 }
 .resume .content .formacao li{
     margin-bottom: 10px;
@@ -177,6 +180,7 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 .portfolio .content article{
     width: 30vh;
@@ -186,40 +190,39 @@ body{
 }
 /*contato*/
 .contato .content{
-    
     display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: left;
+    width: 100%;
 }
-.contato .content .item-contato{
-        width: 100%;
-        outline: 1px dashed #000;
-        padding-left: 30px;
-        display: inline-flex;        
+
+.content .fale-conosco{
+    width: 50vh;
+    background-color: #00000015;
+    align-items: flex-end;
+    margin: 10px 10px 10px auto;
+    padding: 5px;
 }
-.content .item-contato .fale-conosco{
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.item-contato .fale-conosco .msg{
+.content .fale-conosco .msg{
     display: block;
-    background-color: #3f4855;
 }
-.content .item-contato .local{
+.fale-conosco #btn-enviar{
+    color: blue;
+    size: 40px;
+    margin: 0px 0px 0px auto;
+    padding: 2px;
+}
+.content .local{
     list-style: none;
     align-content: center;
     margin: 10px 10px 10px 0;
     justify-content:center;
-    width: 30%;
-    
+    width: 50vh;
 }
-.item-contato .local li{
+.content  .local li{
     margin: 10px;
 }
-.item-contato form>p{
+.content form>p{
     display: block;
 }
