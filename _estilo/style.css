@@ -5,32 +5,83 @@ body{
     font-size: 16px;
     font-weight: 400;
 }
+#btn-nav{
+    z-index: 10;
+    position: fixed;
+    size: 20px;
+    margin-top: 10px;
+}
 *{
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
-    
     text-decoration: none;
     box-sizing: border-box;
+    outline: 1px solid #000;
+    
 }
 #main-content{
     min-height: 100vh;
-    max-width: 1000px;
-    display: block;
-    padding-left: 300px;
-    margin: auto;
+    width: 100%;
+    padding: 0 50px 0 50px;
+}
+@media screen and (min-device-width:500px){
+    .home{
+        height: 80vh;
+    }
+
+
+}
+@media screen and (max-device-width:500px){
+    .home{
+        height: 100%;
+    }
+    #main-content{
+        padding: 0;
+    }
 }
 .descricao h2{
     margin-top: 20px;
     color: #ededed;
-    border-bottom: 2px solid black;
-    background:#292720;
+
     padding: 5px;
 }
+.descricao h2::after{
+    content: '';
+    height: 1%;
+    width: 50%;
+    background-color: red;
+   position: absolute;
+   display: block;
+}
+.descricao h2:hover{
+    background-color: #000;
+}
+.descricao h2::before{
+    content: '';
+    height: 20px;
+    width: 200px;
+    background-color: red;
+    
+   margin-top: 0;
+}
+
 .descricao{
     overflow-wrap: break-word;
 }
-/*Aside*/
+/*Aside
+.aside{
+    width: 270px;
+    background:#fdf9ff;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    border-right:1px solid #e8dfec;
+    padding: 30px;
+}
+*/
 .aside{
     width: 270px;
     background: #292720;
@@ -66,6 +117,12 @@ body{
     margin-top: 50px;
     display: block;
 }
+.aside #btn-close{
+  
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 .aside .nav li{
     margin: 20px;
 }
@@ -86,12 +143,17 @@ body{
 }
 /*Home*/
 .home{
-    height: 90vh;
-    background: url("../_imagens/home-back.jpg")no-repeat;
-    background-attachment: fixed;
+    width: 100%;
+  
+    background: url("../_imagens/home-back2.jpg")no-repeat;
+    display: flex;
     background-size: 100%;
-    margin-left: 280px;
-    padding: 5px;   
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: #eafa56 1px dashed;
+    margin: auto;
+   
 } 
 .home .bem-vindo{         
     display: flex;         
@@ -99,15 +161,17 @@ body{
     align-items: center;
     background-color: #0000008a;
     color: #fff;
-    font-size: 40px;
-    height: 90vh;
-    padding-left: 270px;
+    font-size: 20px;
+    position: relative;
+    
 }
+
 /*sobre*/
 
 .sobre .content{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .sobre .content .foto{
     display: inline-block;
@@ -137,7 +201,7 @@ body{
 .projetos .content .item-galeria{
     width: 150px;
     height: 150px;
-    margin: 10px;
+    margin: 15px;
     outline: 1px dashed #000;
 }
 /*skills*/
@@ -193,7 +257,7 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content:space-around;
     width: 100%;
 }
 
@@ -201,7 +265,7 @@ body{
     width: 50vh;
     background-color: #00000015;
     align-items: flex-end;
-    margin: 10px 10px 10px auto;
+    
     padding: 5px;
 }
 .content .fale-conosco .msg{
@@ -210,13 +274,12 @@ body{
 .fale-conosco #btn-enviar{
     color: blue;
     size: 40px;
-    margin: 0px 0px 0px auto;
     padding: 2px;
 }
 .content .local{
     list-style: none;
     align-content: center;
-    margin: 10px 10px 10px 0;
+    
     justify-content:center;
     width: 50vh;
 }
