@@ -17,8 +17,6 @@ body{
     font-family: 'Rubik', sans-serif;
     text-decoration: none;
     box-sizing: border-box;
-    border-radius: 5px;
-    
 }
 #main-content{
     min-height: 100vh;
@@ -30,23 +28,19 @@ body{
     .home{
         height: 80vh;
     }
-
-
 }
-@media screen and (max-device-width:500px){
+@media screen and (max-device-width:600px){
     .home{
         height: 100%;
     }
     #main-content{
         padding: 0;
     }
-    .aside{
-        background-color: red;
-    }
 }
 .descricao h2{
     margin: 20px auto 20px auto;
     color: #232a2a;
+    
 }
 .descricao h2::after{
     content: '';
@@ -55,39 +49,12 @@ body{
     background-color: #0063b4;
     position: absolute;
     display: flex;
- 
 }
-.descricao h2:hover{
-    transition: all 1s;
-    background-color: #000;
-    width: 50%;
-}
-.descricao h2::before{
-    content: '';
-    height: 20px;
-    width: 200px;
-    background-color: red;
-    
-   margin-top: 0;
-}
-
 .descricao{
     overflow-wrap: break-word;
     padding:5px 0px 5px 5px;
+    text-align: justify;
 }
-/*Aside
-.aside{
-    width: 270px;
-    background:#fdf9ff;
-    position: fixed;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    border-right:1px solid #e8dfec;
-    padding: 30px;
-}
-*/
 .aside{
     width: 270px;
     background: #232a2a;
@@ -96,22 +63,23 @@ body{
     left: 0;
     top: 0;
     z-index: 10;
-    color: #faa856;
     padding: 30px;
+    margin-left: -280px;
 }
-
 .aside .imagem img{
     width: 50%;
     border-radius: 100%;
     transform: translate(50%);
 }
 .aside .imagem{
-    border: 1px solid #0063b4;
+    border: 2px solid #0063b4;
+    border-radius: 5px;
 }
 .aside .imagem .redes-sociais{
     display: flex;
     justify-content: center;
     background-color: #0063b4;
+    border-radius: 5px;
 }
 .aside .imagem .redes-sociais a{
     background:#000;
@@ -127,6 +95,7 @@ body{
     margin-top: 50px;
     display: block;
     border: #ededed 1px solid;
+    border-radius: 5px;
 }
 .aside #btn-close{
   
@@ -138,8 +107,8 @@ body{
     margin: 20px;
 }
 .aside .nav li:hover{
-    border-top: 2px solid #0063b4;
-    border-bottom: 2px solid #0063b4;
+    border-top: 3px solid #0063b4;
+    border-bottom: 3px solid #0063b4;
     padding-left: 20px;
     transition: all 0.5s;
 }
@@ -159,7 +128,6 @@ body{
 /*Home*/
 .home{
     width: 100%;
-  
     background: url("../_imagens/home-back2.jpg")no-repeat;
     display: flex;
     background-size: 100%;
@@ -173,14 +141,14 @@ body{
 .home .bem-vindo{         
     display: flex;         
     justify-content: center;
-    align-items: center;
     background-color: #0000008a;
     color: #fff;
     font-size: 20px;
     position: relative;
-    
+    flex: 1;
+    text-justify: auto;
 }
-
+.home .bem-vindo h2{margin: auto; text-align: center;}
 /*sobre*/
 
 .sobre .content{
@@ -189,12 +157,12 @@ body{
     justify-content: space-between;
 }
 .sobre .content .foto{
-    display: inline-block;
-    margin: auto 10px auto 0;
+    margin: 0;
+    width: 50vh;
+    height: 50vh;
 }
 .sobre .content .foto img{
-    width: 40vh;
-    height: 40vh;
+    width: 100%;
 }
 .sobre .content .info-sobre{
     display: inline-block;
@@ -202,8 +170,9 @@ body{
 .info-sobre .formacao{
     list-style-position: inside;
     padding: 10px;
+    list-style-image: url("../_imagens/ok-lista.png");
+   
 }
-
 /*Projetos*/
 .projetos .content{
     display: flex;
@@ -214,43 +183,69 @@ body{
     width: 100%;  
 }
 .projetos .content .item-galeria{
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     margin: 15px;
-    outline: 1px dashed #000;
+    outline: 0.5px dashed#0063b4;
+}
+.projetos .content .item-galeria img{
+    width: 100%;
 }
 /*skills*/
 .skills .content{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
 }
 .skills .habilidades{
-    width: 100%;
+    width: 50vh;
     margin: 5px;
+    background: url("../_imagens/java.png") no-repeat center 70%;
+   
 }
-.skills .habilidades ul>li{
-    list-style: none;
-    outline: 1px dashed #000;
-}
+.skills .habilidades fieldset{
 
+    padding: 5px;
+    border-radius: none;
+    color: #232a2a;
+    background-color: #52525288;
+    font-weight: bold;
+    
+}
+.skills .habilidades .nivel{
+    height: 3vh;
+    width: 100%;
+    background-color: #0063b4e0;
+    text-align: end;
+    color: #ededed;
+    font-size: 13px;
+    margin: auto;
+}
 /*resume*/
 .resume .content{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
     width: 100%;
 }
 .resume .content .formacao {
     margin: 5px auto;
-    outline: 1px dashed #000;
     width: 50vh;
+    border-left: 5px  #0063b4;
+    border-style: groove;
+    padding-left: 10px;
+    background-color: #35393be3;
+    background-image: url("../_imagens/fundo-linha.jpg");
+    background-size: 100%;
+    font-weight: bold;
 }
 .resume .content .formacao li{
-    margin-bottom: 10px;
-    align-content: center;
+    margin: auto auto 10px 40px;
+    align-content: flex-end;
     list-style: none;
+    border-bottom: 1px dotted #0063b4;
 }
 /*portfolio*/
 .portfolio .content{
@@ -261,11 +256,37 @@ body{
     justify-content: center;
     width: 100%;
 }
-.portfolio .content article{
+
+.portfolio .content .item-card{
     width: 30vh;
     height: 30vh;
     margin: 5px;
-    outline: 1px dashed #000;
+ 
+    cursor: pointer;
+}
+.content .item-card img{
+    width: 100%;
+}
+.content .item-card .verso{
+    transform: perspective(600px) rotateY(180deg);
+}
+.content .item-card .frente{
+    transform: perspective(600px) rotateY(0deg);
+}
+.frente,.verso{
+    background-color: #0063b454;
+    width: 30vh;
+    height: 30vh;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+}
+.item-card:hover > .frente{
+    transform: perspective(600px) rotateY(-180deg);
+}
+.item-card:hover > .verso{
+    transform: perspective(600px) rotateY(0deg);
 }
 /*contato*/
 .contato .content{
@@ -275,36 +296,40 @@ body{
     justify-content:space-around;
     width: 100%;
 }
-
 .content .fale-conosco{
     width: 50vh;
+    background: url("../_imagens/nota.png") no-repeat right 50%;
     background-color: #0063b477;
-    
     align-items: flex-end;
     padding: 5px;
+    font-weight: 550;
 }
+
 .content .fale-conosco .msg{
     display: block;
+    background-color: #7d7d7d69;
+    border: #232a2a solid 1px;  
 }
 .fale-conosco #btn-enviar{
     background-color: #0063b4;
 }
 .content .local{
     list-style: none;
-    align-content: center;
     margin-bottom: 20px;
-    justify-content:center;
     width: 50vh;
-    border: 2px dashed #7d7d7d;
+    background-color: #232a2a;
+    word-wrap: break-word;
+    color: #ededed;
 }
 .content  .local li{
-    margin: 10px;
-    font-size: 1.5rem;
-    overflow-wrap: break-word;
+    margin: 20px;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    border: 1px #ededed solid;
 }
- .local li>i{
-    color: #0063b4;
-}
-.content form>p{
-    display: block;
+.content  .local li>img{
+    
+    margin-right: 5px;
+    padding: 5px;
 }
