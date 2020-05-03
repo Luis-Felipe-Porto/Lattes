@@ -8,7 +8,6 @@ function virarTodasCartas(){
             cartaVerso.style.transform = 'perspective(600px) rotateY(0deg)';   
         }
     
-
 }
 function exibirMenu(){
     let width = Number(screen.width);
@@ -35,4 +34,11 @@ function closeMenu(){
     menu.style = 'margin-left:-280px;transition: all 1s';
     main.style = 'padding-left: -280px;transition: all 1s';
     home.style = 'width:100%;transition: all 1s';
+}
+
+var skillElements = document.querySelectorAll('.habilidades .nivel');
+var skill = document.querySelector('#skills .content');
+    
+    skill.onmouseover = function carregarHabilidades(skillElements){
+        
 }

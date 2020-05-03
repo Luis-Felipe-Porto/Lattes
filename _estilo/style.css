@@ -17,6 +17,7 @@ body{
     font-family: 'Rubik', sans-serif;
     text-decoration: none;
     box-sizing: border-box;
+ 
 }
 #main-content{
     min-height: 100vh;
@@ -24,23 +25,37 @@ body{
     padding: 0 50px 0 50px;
 }
 
-@media screen and (min-device-width:500px){
+/*tela celular*/
+@media screen and (max-device-width:500px){
     .home{
-        height: 80vh;
-    }
-}
-@media screen and (max-device-width:600px){
-    .home{
-        height: 100%;
+        display: none;
     }
     #main-content{
-        padding: 0;
+        padding: 2%;
+    }
+    #sobre{ 
+        margin-top: 50px;
+    }
+}
+/*tela tablet*/
+@media screen and (min-device-width:500px){
+    .home{
+        display: none;
+        height: 100%;
+    }
+    #sobre{ 
+        margin-top: 50px;
+    }
+}
+/*Computador*/
+@media screen and (min-width:1200px){
+    .home{
+        height: 90vh;
     }
 }
 .descricao h2{
     margin: 20px auto 20px auto;
     color: #232a2a;
-    
 }
 .descricao h2::after{
     content: '';
@@ -52,9 +67,10 @@ body{
 }
 .descricao{
     overflow-wrap: break-word;
-    padding:5px 0px 5px 5px;
+    padding:5px 2px 5px 5px;
     text-align: justify;
 }
+/*menu*/
 .aside{
     width: 270px;
     background: #232a2a;
@@ -62,7 +78,7 @@ body{
     height: 100%;
     left: 0;
     top: 0;
-    z-index: 10;
+    z-index: 21;
     padding: 30px;
     margin-left: -280px;
 }
@@ -74,6 +90,8 @@ body{
 .aside .imagem{
     border: 2px solid #0063b4;
     border-radius: 5px;
+    
+    padding: 10px;
 }
 .aside .imagem .redes-sociais{
     display: flex;
@@ -92,13 +110,11 @@ body{
 .aside .nav{
     list-style: none;
     color: #ededed;
-    margin-top: 50px;
-    display: block;
+    margin-top: 40px;
     border: #ededed 1px solid;
     border-radius: 5px;
 }
 .aside #btn-close{
-  
     position: absolute;
     right: 0;
     top: 0;
@@ -123,7 +139,6 @@ body{
     color: #7d7d7d;
     position: absolute;
     bottom: 0;
-
 }
 /*Home*/
 .home{
@@ -131,24 +146,25 @@ body{
     background: url("../_imagens/home-back2.jpg")no-repeat;
     display: flex;
     background-size: 100%;
-    align-items: center;
-    justify-content: center;
     padding: 5px;
-    border: #eafa56 1px dashed;
-    margin: auto;
-   
+    background-attachment: fixed;
 } 
-.home .bem-vindo{         
-    display: flex;         
-    justify-content: center;
-    background-color: #0000008a;
-    color: #fff;
-    font-size: 20px;
-    position: relative;
-    flex: 1;
-    text-justify: auto;
+.bem-vindo{         
+    background-color: #06508b;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    padding: 2px;
+    color: #ededed;
 }
-.home .bem-vindo h2{margin: auto; text-align: center;}
+.bem-vindo h2{
+    display: flex;
+    justify-content: flex-end;
+}
+.bem-vindo p{
+    display: flex;
+    align-items: center;
+}
 /*sobre*/
 
 .sobre .content{
@@ -164,14 +180,10 @@ body{
 .sobre .content .foto img{
     width: 100%;
 }
-.sobre .content .info-sobre{
-    display: inline-block;
-}
 .info-sobre .formacao{
     list-style-position: inside;
     padding: 10px;
-    list-style-image: url("../_imagens/ok-lista.png");
-   
+    list-style-image: url("../_imagens/ok-lista.png"); 
 }
 /*Projetos*/
 .projetos .content{
@@ -183,10 +195,10 @@ body{
     width: 100%;  
 }
 .projetos .content .item-galeria{
-    width: 250px;
-    height: 250px;
+    width: 30vh;
+    height: 30vh;
     margin: 15px;
-    outline: 0.5px dashed#0063b4;
+    border: 1px double #0063b4;
 }
 .projetos .content .item-galeria img{
     width: 100%;
@@ -203,7 +215,7 @@ body{
     width: 50vh;
     margin: 5px;
     background: url("../_imagens/java.png") no-repeat center 70%;
-   
+    margin-bottom: 50px;
 }
 .skills .habilidades fieldset{
 
@@ -217,11 +229,12 @@ body{
 .skills .habilidades .nivel{
     height: 3vh;
     width: 100%;
-    background-color: #0063b4e0;
+    background-color: #048b38f8;
     text-align: end;
     color: #ededed;
     font-size: 13px;
     margin: auto;
+    border-radius: 5px;
 }
 /*resume*/
 .resume .content{
@@ -236,7 +249,6 @@ body{
     border-left: 5px  #0063b4;
     border-style: groove;
     padding-left: 10px;
-    background-color: #35393be3;
     background-image: url("../_imagens/fundo-linha.jpg");
     background-size: 100%;
     font-weight: bold;
@@ -261,7 +273,6 @@ body{
     width: 30vh;
     height: 30vh;
     margin: 5px;
- 
     cursor: pointer;
 }
 .content .item-card img{
@@ -274,13 +285,14 @@ body{
     transform: perspective(600px) rotateY(0deg);
 }
 .frente,.verso{
-    background-color: #0063b454;
+    background-color: #037e3a8a;
     width: 30vh;
     height: 30vh;
     overflow: hidden;
     backface-visibility: hidden;
     position: absolute;
     transition: transform .6s linear;
+    border-radius: 10%;
 }
 .item-card:hover > .frente{
     transform: perspective(600px) rotateY(-180deg);
@@ -307,7 +319,7 @@ body{
 
 .content .fale-conosco .msg{
     display: block;
-    background-color: #7d7d7d69;
+    background-color: #f5f3f37e;
     border: #232a2a solid 1px;  
 }
 .fale-conosco #btn-enviar{
@@ -332,4 +344,7 @@ body{
     
     margin-right: 5px;
     padding: 5px;
+}
+.content  .local li>a{
+    color: #ededed;
 }
