@@ -143,7 +143,7 @@ body{
 /*Home*/
 .home{
     width: 100%;
-    background: url("../_imagens/home-back2.jpg")no-repeat;
+    background: url("../imagens/home-back2.jpg")no-repeat;
     display: flex;
     background-size: 100%;
     padding: 5px;
@@ -183,7 +183,7 @@ body{
 .info-sobre .formacao{
     list-style-position: inside;
     padding: 10px;
-    list-style-image: url("../_imagens/ok-lista.png"); 
+    list-style-image: url("../imagens/ok-lista.png"); 
 }
 /*Projetos*/
 .projetos .content{
@@ -214,7 +214,7 @@ body{
 .skills .habilidades{
     width: 50vh;
     margin: 5px;
-    background: url("../_imagens/java.png") no-repeat center 70%;
+    background: url("../imagens/java.png") no-repeat center 70%;
     margin-bottom: 50px;
 }
 .skills .habilidades fieldset{
@@ -249,7 +249,7 @@ body{
     border-left: 5px  #0063b4;
     border-style: groove;
     padding-left: 10px;
-    background-image: url("../_imagens/fundo-linha.jpg");
+    background-image: url("../imagens/fundo-linha.jpg");
     background-size: 100%;
     font-weight: bold;
 }
@@ -310,7 +310,7 @@ body{
 }
 .content .fale-conosco{
     width: 50vh;
-    background: url("../_imagens/nota.png") no-repeat right 50%;
+    background: url("../imagens/nota.png") no-repeat right 50%;
     background-color: #0063b477;
     align-items: flex-end;
     padding: 5px;
