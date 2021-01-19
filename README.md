@@ -21,4 +21,4 @@
 ### Instalação
 O Projeto está disponivel atraves do github pages
 
-Acesse [Luis Felipe Porto](https://nodejs.org/) para conferir a pagina web
+Acesse [Luis Felipe Porto](https://luis-felipe-porto.github.io/Lattes/) para conferir a pagina web
